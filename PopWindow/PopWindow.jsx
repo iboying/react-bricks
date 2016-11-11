@@ -13,12 +13,12 @@ import css from './pop_window.less'
 import classNames from 'classnames/bind'
 import QueueAnim from 'rc-queue-anim'
 
-let cx = classNames.bind(css)
+const cx = classNames.bind(css);
 
 export default class PopWindow extends Component {
 
 	popStyle() {
-		let className = null
+		let className = null;
 		switch(this.props.direction) {
 			case 'top':
 				className = cx({
@@ -50,11 +50,11 @@ export default class PopWindow extends Component {
 					toogleBottom: this.props.show
 				})
 		}
-		return className
+		return className;
 	}
 
 	render() {
-		const { show, onCancel } = this.props
+		const { show, onCancel } = this.props;
 
 		return (
 			<div>
